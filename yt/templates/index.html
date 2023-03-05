@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>home</title>
+    <style>
+      /*--------------------
+General Style
+---------------------*/
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Quicksand", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        background: rgba(30, 29, 31, 1);
+        background: -moz-linear-gradient(
+          -45deg,
+          rgba(30, 29, 31, 1) 0%,
+          rgba(223, 64, 90, 1) 100%
+        );
+        background: -webkit-gradient(
+          left top,
+          right bottom,
+          color-stop(0%, rgba(30, 29, 31, 1)),
+          color-stop(100%, rgba(223, 64, 90, 1))
+        );
+        background: -webkit-linear-gradient(
+          -45deg,
+          rgba(30, 29, 31, 1) 0%,
+          rgba(223, 64, 90, 1) 100%
+        );
+        background: -o-linear-gradient(
+          -45deg,
+          rgba(30, 29, 31, 1) 0%,
+          rgba(223, 64, 90, 1) 100%
+        );
+        background: -ms-linear-gradient(
+          -45deg,
+          rgba(30, 29, 31, 1) 0%,
+          rgba(223, 64, 90, 1) 100%
+        );
+        background: linear-gradient(
+          135deg,
+          rgba(30, 29, 31, 1) 0%,
+          rgba(223, 64, 90, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1d1f', endColorstr='#df405a', GradientType=1 );
+      }
+
+      /*--------------------
+Text
+---------------------*/
+
+      h2,
+      h3 {
+        font-size: 16px;
+        letter-spacing: -1px;
+        line-height: 20px;
+      }
+
+      h2 {
+        color: #747474;
+        text-align: center;
+      }
+
+      h3 {
+        color: #032942;
+        text-align: right;
+      }
+
+      /*--------------------
+Icons
+---------------------*/
+      .i {
+        width: 20px;
+        height: 20px;
+      }
+
+      .i-login {
+        margin: 13px 0px 0px 15px;
+        position: relative;
+        float: left;
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .i-more {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .i-save {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .i-warning {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .i-close {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .i-left {
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      /*--------------------
+Login Box
+---------------------*/
+
+      .box {
+        width: 330px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .box-form {
+        width: 320px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .box-login-tab {
+        width: 50%;
+        height: 40px;
+        background: #fdfdfd;
+        position: relative;
+        float: left;
+        z-index: 1;
+
+        -webkit-border-radius: 6px 6px 0 0;
+        -moz-border-radius: 6px 6px 0 0;
+        border-radius: 6px 6px 0 0;
+
+        -webkit-transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+        transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        -webkit-box-shadow: 15px -15px 30px rgba(0, 0, 0, 0.32);
+        -moz-box-shadow: 15px -15px 30px rgba(0, 0, 0, 0.32);
+        box-shadow: 15px -15px 30px rgba(0, 0, 0, 0.32);
+      }
+
+      .box-login-title {
+        width: 35%;
+        height: 40px;
+        position: absolute;
+        float: left;
+        z-index: 2;
+      }
+
+      .box-login {
+        position: relative;
+        top: -4px;
+        width: 320px;
+        background: #fdfdfd;
+        text-align: center;
+        overflow: hidden;
+        z-index: 2;
+
+        -webkit-border-top-right-radius: 6px;
+        -webkit-border-bottom-left-radius: 6px;
+        -webkit-border-bottom-right-radius: 6px;
+        -moz-border-radius-topright: 6px;
+        -moz-border-radius-bottomleft: 6px;
+        -moz-border-radius-bottomright: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        -webkit-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+        -moz-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+        box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+      }
+
+      .box-info {
+        width: 260px;
+        top: 60px;
+        position: absolute;
+        right: -5px;
+        padding: 15px 15px 15px 30px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 0;
+
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+
+        -webkit-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+        -moz-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+        box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+      }
+
+      .line-wh {
+        width: 100%;
+        height: 1px;
+        top: 0px;
+        margin: 12px auto;
+        position: relative;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /*--------------------
+Form
+---------------------*/
+
+      label {
+        float: left;
+        width: 100%;
+        top: 0px;
+        color: #032942;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        height: 32px;
+        padding: 0px 10px;
+        background-color: rgba(0, 0, 0, 0.03);
+        border: none;
+        display: inline;
+        color: #fff9f9;
+        font-size: 16px;
+        font-weight: 400;
+        float: left;
+
+        -webkit-box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.05),
+          1px 1px 0px rgba(255, 255, 255, 1);
+        -moz-box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.05),
+          1px 1px 0px rgba(255, 255, 255, 1);
+        box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.05),
+          1px 1px 0px rgba(255, 255, 255, 1);
+      }
+
+      input[type="submit"],
+      .download-button {
+        width: 100%;
+        height: 48px;
+        margin-top: 24px;
+        padding: 0px 20px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        background-color: #87314e;
+        border: 1px #87314e solid;
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      #paste {
+        font-size: 30px;
+        color: #fff;
+      }
+      .heading {
+        text-align: center;
+        color: aliceblue;
+      }
+      #inp {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="heading">Youtube video downloader</h1>
+    </div>
+    <form method="POST" action="{% url 'down' %}" class="field">
+      {% csrf_token %}
+
+      <label for="link" id="paste">paste link: </label>
+      <input type="text" name="link" id="link" value="" id="inp" />
+      <input type="submit" value="download" />
+    </form>
+    {% if new_url %}
+    <a href="{{ new_url }}" class="download-button" style="color: aqua"
+      >click here to download</a
+    >
+    {% endif %}
+  </body>
+</html>
